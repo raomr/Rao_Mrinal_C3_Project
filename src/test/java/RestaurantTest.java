@@ -55,7 +55,6 @@ class RestaurantTest {
     public void if_no_items_Are_passed_calculateItemTotal_should_return_0() {
     	List<String> itemNames = new ArrayList<String>();
     	int itemTotal = restaurant.calculateItemTotal(itemNames);
-    	System.out.println(itemTotal);
     	assertEquals(itemTotal,0);
     }
     //<<<<<<<<<<<<<<<<<<<<CALCULATING ITEM TOTAL>>>>>>>>>>>>>>>>>>>>>>>>>>

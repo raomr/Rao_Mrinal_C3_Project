@@ -42,6 +42,17 @@ public class Restaurant {
         }
         return null;
     }
+	
+	//Part 3: Solution : find item total
+	
+	  public int calculateItemTotal(List<String> itemNames) { 
+		  	int itemTotal = 0;
+		  	for (String itemName: itemNames) { 
+		  		Item item = findItemByName(itemName);
+		  		if(item != null) itemTotal+=item.getPrice(); 
+		  		}
+		  	return itemTotal; 
+		  	}
 
     public void addToMenu(String name, int price) {
         Item newItem = new Item(name,price);
