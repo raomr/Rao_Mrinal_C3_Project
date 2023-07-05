@@ -41,6 +41,24 @@ class RestaurantTest {
     }
 
     //<<<<<<<<<<<<<<<<<<<<<<<<<OPEN/CLOSED>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	
+	//>>>>>>>>>>>>>>>>>>>>>>CALCULATING ITEM TOTAL<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    @Test
+    public void calculateItemTotal_should_return_388() {
+    	List<String> itemNames = new ArrayList<String>();
+    	itemNames.add("Sweet corn soup");
+    	itemNames.add("Vegetable lasagne");
+    	int itemTotal = restaurant.calculateItemTotal(itemNames);
+    	assertEquals(itemTotal,388);
+    }
+    @Test
+    public void if_no_items_Are_passed_calculateItemTotal_should_return_0() {
+    	List<String> itemNames = new ArrayList<String>();
+    	int itemTotal = restaurant.calculateItemTotal(itemNames);
+    	System.out.println(itemTotal);
+    	assertEquals(itemTotal,0);
+    }
+    //<<<<<<<<<<<<<<<<<<<<CALCULATING ITEM TOTAL>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
     //>>>>>>>>>>>>>>>>>>>>>>>>>>>MENU<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
